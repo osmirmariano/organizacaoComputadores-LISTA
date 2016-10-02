@@ -3,13 +3,11 @@
 #\$t0$>$\$t1 e \$t2 terá o valor 0 se \$t1$\geq$\$t0.
 
 	.data
+pergunta: .asciiz "Informe um valor inteiro: " 
 	.text
 	.globl inicio
 inicio:
-	jal le_inteiro_do_teclado  # chama função para ler
-	#la  $t0, 0($v0)		   # carrega o inteiro lido em $t7
-	#jal le_inteiro_do_teclado  # chama função para ler
-	#la  $t1, 0($v1)	
+	jal le_inteiro_do_teclado  # chama função para ler	
 	j chama
 	
 	
@@ -19,10 +17,17 @@ le_inteiro_do_teclado:
 	syscall
 	li $v0, 5
 	syscall
-	add $t2, $zero, $v0
+	add $t0, $zero, $v0
 	li $v0, 5
 	syscall
-	add $t3, $zero, $v0
+	add $t1, $zero, $v0
 	j voltar
 voltar: 
 	jr $ra	
+chama:
+	ble $t0, $t1, nMaior#ver ainda o voltar
+	add $t2, $zero, 1
+nMaior:
+	ble $t1, $t0, encerra
+	add $t2, $zero, $zero
+encerra:
