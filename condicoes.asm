@@ -1,3 +1,4 @@
+#Fazer um programa que compare dois números (a,b) e diga se a>b, ou b>a, ou ainda se a==b
 	.data
 msg1:	.asciiz "A é maior que C"
 msg2:	.asciiz "C é maior que A"

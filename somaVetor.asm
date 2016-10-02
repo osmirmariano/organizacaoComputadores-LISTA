@@ -1,4 +1,6 @@
-
+#Projetar um programa em assembly do Mips que faça a soma de todos elementos de um vetor de números float (vetor com 10 elementos) e
+#imprima o resultado final;
+#IMPLEMENTAÇÃO EM C++
 #float vetor[10], soma = 0;
 #for(int x = 0; x < 10; x++){
 # 	soma = soma+vetor[x];

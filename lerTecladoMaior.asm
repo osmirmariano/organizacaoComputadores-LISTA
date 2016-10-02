@@ -1,3 +1,5 @@
+#Faça um programa em assembly que leia dois números do usuário via teclado (e armazene nos respecitvos registradores \$t0, \$t1,
+#em seguida faça um teste e imprima uma mensagem dizendo qual dos dois números é maior: “\$t0$>$\$t1”, “\$t1$>$\$t0” ou “\$t1 = = \$t0”
 	.data
 pergunta: .asciiz "Informe um valor inteiro: " 
 msg1:	.asciiz "A é maior que C"
